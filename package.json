@@ -1,10 +1,10 @@
 {
-  "name": "rollup-starter-project",
-  "version": "1.0.0",
-  "description": "Sample project for packages built with rollup.",
-  "main": "dist/rollup-starter-project.js",
-  "module": "dist/rollup-starter-project.mjs",
-  "jsnext:main": "dist/rollup-starter-project.mjs",
+  "name": "blueprint",
+  "version": "0.1.0",
+  "description": "A frontend package for accessing data as model objects.",
+  "main": "dist/blueprint.js",
+  "module": "dist/blueprint.mjs",
+  "jsnext:main": "dist/blueprint.mjs",
   "scripts": {
     "prebuild": "eslint lib test",
     "build": "rollup -c",
@@ -13,7 +13,7 @@
     "test": "mocha",
     "prepublish": "npm test"
   },
-  "repository": "rollup/rollup-starter-project",
+  "repository": "thebrubaker/blueprint",
   "keywords": [
     "es6",
     "modules",
@@ -21,16 +21,16 @@
     "bundle",
     "browser"
   ],
-  "author": "Brian Donovan",
+  "author": "Joel Brubaker",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rollup/rollup-starter-project/issues"
+    "url": "https://github.com/thebrubaker/blueprint/issues"
   },
   "files": [
     "lib",
     "dist"
   ],
-  "homepage": "https://github.com/rollup/rollup-starter-project#readme",
+  "homepage": "https://github.com/thebrubaker/blueprint#readme",
   "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^7.1.1",
@@ -44,6 +44,7 @@
     "rollup": "^0.37.0",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-istanbul": "^1.1.0",
-    "rollup-watch": "^2.5.0"
+    "rollup-watch": "^2.5.0",
+    "sinon": "^2.1.0"
   }
 }
