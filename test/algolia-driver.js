@@ -2,7 +2,6 @@ import AlgoliaDriver from '../lib/drivers/algolia-driver'
 import chai from 'chai'
 import sinon from 'sinon'
 
-/* eslint no-console: 0 */
 describe('AlgoliaDriver', () => {
   it('can load the algolia driver', () => { 
     let algolia = sinon.spy()
