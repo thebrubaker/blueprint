@@ -1,6 +1,6 @@
 {
-  "name": "blueprint",
-  "version": "0.1.0",
+  "name": "lantern-blueprint",
+  "version": "1.0.0",
   "description": "A frontend package for accessing data as model objects.",
   "main": "dist/blueprint.js",
   "module": "dist/blueprint.mjs",
