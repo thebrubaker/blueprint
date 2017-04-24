@@ -1,4 +1,4 @@
-import ApiDriver from '../lib/drivers/api-driver'
+import ApiDriver from '../../lib/drivers/api-driver'
 import chai from 'chai'
 import sinon from 'sinon'
 

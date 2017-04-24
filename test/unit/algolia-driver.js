@@ -1,4 +1,4 @@
-import AlgoliaDriver from '../lib/drivers/algolia-driver'
+import AlgoliaDriver from '../../lib/drivers/algolia-driver'
 import chai from 'chai'
 import sinon from 'sinon'
 

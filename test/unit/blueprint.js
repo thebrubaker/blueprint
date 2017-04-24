@@ -1,6 +1,6 @@
-import Blueprint from '../lib/blueprint'
-import FirebaseDriver from '../lib/drivers/firebase-driver'
-import { name, location, embeds, hasMany, config, driver, drivers } from '../lib/symbols'
+import Blueprint from '../../lib/blueprint'
+import FirebaseDriver from '../../lib/drivers/firebase-driver'
+import { name, location, embeds, hasMany, config, driver, drivers } from '../../lib/symbols'
 import assert from 'assert'
 import sinon from 'sinon'
 

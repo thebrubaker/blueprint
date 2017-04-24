@@ -1,4 +1,4 @@
-import FirebaseDriver from '../lib/drivers/firebase-driver'
+import FirebaseDriver from '../../lib/drivers/firebase-driver'
 import chai from 'chai'
 import sinon from 'sinon'
 
