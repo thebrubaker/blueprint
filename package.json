@@ -41,6 +41,7 @@
     "babelrc-rollup": "^3.0.0",
     "chai": "^3.5.0",
     "eslint": "^3.12.2",
+    "firebase": "^3.8.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
     "rollup": "^0.37.0",
