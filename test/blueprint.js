@@ -1,4 +1,3 @@
-import CoreBlueprint from '../lib/core'
 import Blueprint from '../lib/blueprint'
 import FirebaseDriver from '../lib/drivers/firebase-driver'
 import { name, location, embeds, hasMany, config, driver, drivers } from '../lib/symbols'
@@ -18,7 +17,6 @@ describe('Blueprint', () => {
     Blueprint.load(availableDrivers)
     const blueprint = new Blueprint(model)
     assert(blueprint instanceof Blueprint)
-    assert(blueprint instanceof CoreBlueprint)
   })
 
   it('loads a set of drivers', () => {
@@ -85,10 +83,10 @@ describe('Blueprint', () => {
     const availableDrivers = {
       firebase: FirebaseDriver
     }
-    sinon.stub(FirebaseDriver.prototype, 'fetch')
-    sinon.stub(FirebaseDriver.prototype, 'create')
-    sinon.stub(FirebaseDriver.prototype, 'update')
-    sinon.stub(FirebaseDriver.prototype, 'delete')
+    sinon.stub(FirebaseDriver.prototype, 'fetch').returns(Promise.resolve({ key: 1, attributes: {} }))
+    sinon.stub(FirebaseDriver.prototype, 'create').returns(Promise.resolve({ key: 1, attributes: {} }))
+    sinon.stub(FirebaseDriver.prototype, 'update').returns(Promise.resolve({ key: 1, attributes: {} }))
+    sinon.stub(FirebaseDriver.prototype, 'delete').returns(Promise.resolve({ key: 1, attributes: {} }))
 
     Blueprint.load(availableDrivers)
     const blueprint = new Blueprint(model)
@@ -110,5 +108,10 @@ describe('Blueprint', () => {
     blueprint.delete(4)
     assert(blueprint[driver].delete.called)
     assert(blueprint[driver].delete.calledWith(4))
+
+    FirebaseDriver.prototype.fetch.restore()
+    FirebaseDriver.prototype.create.restore()
+    FirebaseDriver.prototype.update.restore()
+    FirebaseDriver.prototype.delete.restore()
   })
 })
