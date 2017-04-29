@@ -1,4 +1,4 @@
-import { Blueprint } from '../../'
+import Blueprint from '../../'
 import chai from 'chai'
 
 describe('Importing Blueprint', () => {
